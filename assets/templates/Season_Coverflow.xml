@@ -2,16 +2,17 @@
   <head>
     <script src="{{URL(:/js/utils.js)}}" />
   </head>
-  
+
   <body>
     <scroller id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
-      <header>
-        <simpleHeader>
-          <title>{{VAL(title2)}}</title>
-        </simpleHeader>
+        <header>
+        <imageHeader>
+          <image insets="850, 0, 0, 0" required="true">http://{{VAL(%ip)}}/atv/gradient.php?image={{IMAGEURL(art:::)}}&amp;gradient=seasons&amp;hd=1080</image>
+        </imageHeader><!--&amp;title={{EVAL("{{VAL(title2)}}".replace(' ', '+'))}}-->
       </header>
       <items>
-      <collectionDivider alignment="left">
+
+        <collectionDivider alignment="left">
             <title></title>
         </collectionDivider>
         <shelf id="coverflow" columnCount="{{EVAL(min({{VAL(size:0)}},5))}}">
@@ -21,7 +22,7 @@
                 <goldenPoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_tvshows::Highlighted Only=false|Show All=true)}}"
                               onPlay="atv.loadURL('{{URL(key)}}')"
                               onSelect="atv.loadURL('{{URL(key)}}')"
-                              onHoldSelect="atv.loadURL('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
+                              onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
                   {{COPY(Directory)}}
                   <title>{{VAL(title)}}</title>
                   <image>{{IMAGEURL(thumb::384)}}</image>

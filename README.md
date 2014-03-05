@@ -1,8 +1,6 @@
 # PlexConnect
 or: "Plex @ aTV - think different..."
 
-NOTE: plexconnect.org is a SCAM, do not pay for PlexConnect.
-
 We all want the pleasure of Plex on the big screen - in this case driven by an AppleTV.
 Unfortunately there are officially no Apps allowed on AppleTV, most of the time a jailbreak is late (iOS 5.2?) or not available at all (aTV3).
 
@@ -73,6 +71,8 @@ Basic settings collection. Creates ```Settings.cfg``` at first run - which may b
 Handles the aTV settings like ViewModes or Transcoder options. Stores aTV settings in ```ATVSettings.cfg```.
 * __Localize.py__ -
 Holds a couple of utility functions for text translation purposes. Uses dictionaries from ```assets/locales/```.
+* __Subtitle.py__ -
+Subtitle parser functions for PlexConnect's own renderer, converts subs to JSON for easy transfer to aTV.
 
 
 ## License and Disclaimer

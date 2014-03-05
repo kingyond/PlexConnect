@@ -269,7 +269,13 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
         XMLtemplate = 'HomeVideoSection.xml'
         
     elif cmd == 'TVSection':
-        XMLtemplate = 'TVSection.xml'
+        XMLtemplate = 'TVSection.xml'    
+    
+    elif cmd == 'LibraryOnDeck':
+        XMLtemplate = 'Library_OnDeck.xml'    
+        
+    elif cmd == 'LibraryRecentlyAdded':
+        XMLtemplate = 'Library_RecentlyAdded.xml'
     
     elif cmd.find('SectionPreview') != -1:
         XMLtemplate = cmd + '.xml'
@@ -377,7 +383,7 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
         XMLtemplate = 'Search_Results.xml'
     
     elif path=='/library/sections':  # from PlexConnect.xml -> for //local, //myplex
-        XMLtemplate = 'Library_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'libraryview')+'.xml'
+        XMLtemplate = 'Library_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'libraryview')+'.xml'    
     
     elif path=='/channels/all':
         XMLtemplate = 'Channel_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'channelview')+'.xml'

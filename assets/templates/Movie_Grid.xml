@@ -8,7 +8,7 @@
     {{CUT(size:CUT:0=CUT|1=)}}
     <header>
         <imageHeader>
-          <image insets="30, 0, 0, 0" required="true">{{URL(:/thumbnails/movies{{VAL(^aTVScreenResolution)}}.jpg)}}</image>
+          <image insets="25, 0, 0, 0" required="true">{{URL(:/thumbnails/moviestext{{VAL(^aTVScreenResolution)}}.jpg)}}</image>
         </imageHeader>
       </header>
       <items>
@@ -17,7 +17,7 @@
             <moviePoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_movies::Highlighted Only=false|Show All=true)}}"
                              onPlay="atv.loadURL('{{URL(key)}}&amp;PlexConnect=Play')"
                              onSelect="atv.loadURL('{{URL(key)}}&amp;PlexConnect=MoviePrePlay')"
-                             onHoldSelect="atv.loadURL('{{URL(key)}}&amp;PlexConnect=ScrobbleMenuVideo')">
+                             onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenuVideo')">
               {{COPY(Video)}}
               <title>{{VAL(title)}}</title>
               <subtitle>{{VAL(year:&#x00AD;)}}</subtitle>

@@ -7,7 +7,7 @@
     <scroller id="Show_Grid">
     <header>
         <imageHeader>
-          <image insets="30, 0, 0, 0" required="true">{{URL(:/thumbnails/tvshows{{VAL(^aTVScreenResolution)}}.jpg)}}</image>
+          <image insets="25, 0, 0, 0" required="true">{{URL(:/thumbnails/tvshowstext{{VAL(^aTVScreenResolution)}}.jpg)}}</image>
         </imageHeader>
       </header>
       <items>
@@ -16,7 +16,7 @@
             <moviePoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_tvshows::Highlighted Only=false|Show All=true)}}"
                          onPlay="flattenSeason('{{URL(key)}}', '{{VAL(%accesstoken)}}', '{{SETTING(flattenseason)}}', 'False')"
                          onSelect="flattenSeason('{{URL(key)}}', '{{VAL(%accesstoken)}}', '{{SETTING(flattenseason)}}', 'False')"
-                         onHoldSelect="atv.loadURL('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
+                         onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
               {{COPY(Directory)}}
               <title>{{VAL(title)}}</title>
               <image>{{IMAGEURL(thumb::384)}}</image>
