@@ -13,12 +13,11 @@
     {{VAR(items:NoKey:FALSE)}}  <!--this sets the var to FALSE-->
 
     <scroller id="com.sample.movie-showcase-grid">
-      <header>
+    <header>
         <simpleHeader>
           <title>{{VAL(title1)}}</title>
         </simpleHeader>
-      </header>
-      
+      </header>      
       <items>
         <collectionDivider alignment="left" accessibilityLabel="On Deck">
           {{CUT(@OnDeck/size:CUT:0=CUT|1=)}}
