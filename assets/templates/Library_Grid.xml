@@ -15,7 +15,7 @@
       <scroller id="com.sample.movie-showcase-grid">
       <header>
         <imageHeader>
-            <image insets="{{VAL(^aTVScreenResolution:1:720=50|1080=80)}}, 0, 0, 0" required="true">{{URL(:/thumbnails/header{{VAL(^aTVScreenResolution)}}.png)}}</image>
+            <image insets="50, 0, 0, 0" required="true">{{URL(:/thumbnails/header{{VAL(^aTVScreenResolution)}}.png)}}</image>
         </imageHeader>{{CUT($imageheader::Hide=CUT|Show=)}}{{CUT(^aTVFirmwareVersion:CUT:=CUT|6.0=)}}
         <simpleHeader>
             <title>{{TEXT(Plex Library)}}</title>
@@ -75,7 +75,7 @@
                                                onHoldSelect="refreshSection('{{VAL(key)}}', '{{URL(refreshKey)}}')">
                             {{COPY(Directory)}}
                             {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
-                            <title>{{VAL(title)}}</title>
+                            <title></title>
                             <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
                             <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
                             <image>{{URL(:/thumbnails/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
@@ -141,7 +141,7 @@
                                                onHoldSelect="refreshSection('{{VAL(key)}}', '{{URL(refreshKey)}}')">
                             {{COPY(Directory)}}
                             {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
-                            <title>{{VAL(title)}}</title>
+                            <title></title>
                             <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
                             <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
                             <image>{{URL(:/thumbnails/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
@@ -233,7 +233,7 @@
                                                onHoldSelect="refreshSection('{{VAL(key)}}', '{{URL(refreshKey)}}')">
                             {{COPY(Directory)}}
                             {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
-                            <title>{{VAL(title)}}</title>
+                            <title></title>
                             <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
                             <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
                             <image>{{URL(:/thumbnails/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
