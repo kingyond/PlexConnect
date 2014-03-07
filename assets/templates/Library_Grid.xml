@@ -22,7 +22,7 @@
         </simpleHeader>{{CUT($imageheader::Show=CUT|Hide=)}}
       </header>
       <items>
-          
+      <!-- Top Flow -->    
       <showcase accessibilityLabel="Showcase movies" id="showcase_1">
         <initialSelection>
             <indexPath>
@@ -54,6 +54,8 @@
             </showcasePoster>{{CUT($library_search::Show=|Hide=CUT)}} 
          </items>
          </showcase>{{CUT($top_flow:CUT:checked=|unchecked=CUT)}} 
+          
+          <!-- Top Library -->
           
         <__COPY__>  
         {{COPY(Server:@main/size::0=|1=COPY)}}
@@ -121,6 +123,8 @@
             </shelfSection>
           </sections>
         </shelf>{{CUT($library_ondeck::checked=|unchecked=CUT)}}{{CUT(@OnDeck/Server/size:CUT:0=CUT|1=)}}  
+        
+        <!-- Middle Library -->
         
         <__COPY__>  
         {{COPY(Server:@main/size::0=|1=COPY)}}
@@ -205,13 +209,15 @@
                             {{COPY(Directory)}}
                             {{VAR(channels:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
                             <title>{{VAL(title)}}</title>
-                            <image>{{IMAGEURL(thumb::384)}}</image>
-                            <defaultImage>resource://Poster.png</defaultImage>
+                            <image>{{IMAGEURL(thumb::)}}</image>
+                            <defaultImage>resource://Square.png</defaultImage>
                         </moviePoster>
                     </items>
                 </shelfSection>
           </sections>
         </shelf>{{CUT($library_channels:CUT:checked=|unchecked=CUT)}}{{CUT(@VideoChannels/Server/size:CUT:0=CUT|1=)}}  
+          
+        <!-- Bottom Library -->  
           
         <__COPY__>  
         {{COPY(Server:@main/size::0=|1=COPY)}}
