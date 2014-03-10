@@ -6,10 +6,11 @@
   <body>
     <scroller id="com.sample.movie-grid">
     {{CUT(size:CUT:0=CUT|1=)}}
-    <header>
-        <imageHeader>
-          <image insets="25, 0, 0, 0" required="true">{{URL(:/thumbnails/moviestext{{VAL(^aTVScreenResolution)}}.jpg)}}</image>
-        </imageHeader>
+      <header>
+        <simpleHeader>
+          <title>{{VAL(title1)}}</title>
+          <subtitle>{{VAL(title2)}}</subtitle>
+        </simpleHeader>
       </header>
       <items>
         <grid columnCount="7" id="grid_0">

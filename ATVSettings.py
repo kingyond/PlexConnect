@@ -39,15 +39,13 @@ options = { \
     'tv_navbar_genres'          :('checked', 'unchecked'), \
     'tv_navbar_more'            :('checked', 'unchecked'), \
     'libraryview'            :('Grid', 'List'), \
-    'imageheader'            :('Hide', 'Show'), \
+    'imageheader'            :('Show', 'Hide'), \
     'sectionicons'            :('Apple', 'Plex', 'Fanart', 'Custom'), \
-    'sectionsposition'            :('Top', 'Middle', 'Bottom', 'Hide'), \
-    'library_search'            :('Hide', 'Show'), \
+    'sectionsposition'            :('Top', 'Bottom', 'Flow', 'Middle'), \
+    'library_search'            :('Show', 'Hide'), \
     'library_ondeck'            :('checked', 'unchecked'), \
     'library_recentlyadded'            :('checked', 'unchecked'), \
     'library_channels'            :('unchecked', 'checked'), \
-    'xtra_library'            :('unchecked', 'checked'), \
-    'top_flow'            :('unchecked', 'checked'), \
     'transcodequality'  :('1080p 40.0Mbps', \
                           '480p 2.0Mbps', \
                           '720p 3.0Mbps', '720p 4.0Mbps', \

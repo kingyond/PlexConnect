@@ -162,7 +162,7 @@
           </sections>
         </shelf>
       </bottomShelf>{{CUT(Video/Role/tag:CUT:=)}}
-      
+  
       <moreInfo>{{VAR(cut:NoKey:CUT)}}  <!--this sets the var to CUT-->
         <listScrollerSplit id="com.sample.list-scroller-split">
           <menu>

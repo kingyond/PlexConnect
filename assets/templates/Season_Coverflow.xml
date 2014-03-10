@@ -2,17 +2,16 @@
   <head>
     <script src="{{URL(:/js/utils.js)}}" />
   </head>
-
+  
   <body>
     <scroller id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
-        <header>
-        <imageHeader>
-          <image insets="850, 0, 0, 0" required="true">http://{{VAL(%ip)}}/atv/gradient.php?image={{IMAGEURL(art:::)}}&amp;gradient=seasons&amp;hd=1080</image>
-        </imageHeader><!--&amp;title={{EVAL("{{VAL(title2)}}".replace(' ', '+'))}}-->
+      <header>
+        <simpleHeader>
+          <title>{{VAL(title2)}}</title>
+        </simpleHeader>
       </header>
       <items>
-
-        <collectionDivider alignment="left">
+      <collectionDivider alignment="left">
             <title></title>
         </collectionDivider>
         <shelf id="coverflow" columnCount="{{EVAL(min({{VAL(size:0)}},5))}}">
