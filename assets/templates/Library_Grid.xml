@@ -3,7 +3,6 @@
     <script src="{{URL(:/js/utils.js)}}" />
     <script src="{{URL(:/js/scrobble.js)}}" />
     <script src="{{URL(:/js/settings.js)}}" />
-    <script src="{{URL(:/js/updateXML.js)}}" />
   </head>
 
   <body>
