@@ -154,9 +154,15 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
     
     # check cmd to work on
     cmd = ''
+    channelsearchURL = ''
     if 'PlexConnect' in options:
         cmd = options['PlexConnect']
-    dprint(__name__, 1, "PlexConnect Cmd: "+cmd)
+    
+    if 'PlexConnectChannelsSearch' in options:
+        channelsearchURL = options['PlexConnectChannelsSearch'].replace('+amp+', '&')
+     
+    dprint(__name__, 1, "PlexConnect Cmd: " + cmd)
+    dprint(__name__, 1, "PlexConnectChannelsSearch: " + channelsearchURL)
     
     # check aTV language setting
     if not 'aTVLanguage' in options:
@@ -177,6 +183,10 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
         XMLtemplate = path.lstrip('/')
         path = ''  # clear path - we don't need PMS-XML
     
+    elif cmd=='ChannelsSearch':
+        XMLtemplate = 'ChannelsSearch.xml'
+        path = ''
+        
     elif cmd=='Play':
         XMLtemplate = 'PlayVideo.xml'
     
@@ -202,7 +212,7 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
         for i in range(len(streams)):
             stream = urlparse.parse_qs(streams[i])
             if stream['itag'][0] == '18':
-                url = stream['url'][0] + '&signature=' + stream['sig'][0]
+                url = stream['url'][0]
         if url == '':
             return XML_Error('PlexConnect','Youtube: ATV compatible Trailer not available')
         
@@ -382,6 +392,12 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
     elif path.startswith('/search?'):
         XMLtemplate = 'Search_Results.xml'
     
+    elif path.find('serviceSearch') != -1 or (path.find('video') != -1 and path.lower().find('search') != -1):
+        XMLtemplate = 'ChannelsVideoSearchResults.xml'
+    
+    elif path.find('SearchResults') != -1:
+        XMLtemplate = 'ChannelsVideoSearchResults.xml'
+        
     elif path=='/library/sections':  # from PlexConnect.xml -> for //local, //myplex
         XMLtemplate = 'Library_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'libraryview')+'.xml'    
     
@@ -496,6 +512,13 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
     XML_ExpandAllAttrib(aTVroot, PMSroot, 'main')
     del g_CommandCollection
     
+    if cmd=='ChannelsSearch':
+        for bURL in aTVroot.iter('baseURL'):
+            if channelsearchURL.find('?') == -1:
+                bURL.text = channelsearchURL + '?query='
+            else:
+                bURL.text = channelsearchURL + '&query='
+                
     dprint(__name__, 1, "====== generated aTV-XML ======")
     dprint(__name__, 1, prettyXML(aTVTree))
     dprint(__name__, 1, "====== aTV-XML finished ======")
