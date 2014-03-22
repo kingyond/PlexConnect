@@ -52,6 +52,7 @@
             <label>{{VAL(Video/Producer[2]/tag)}}</label>
           </row>
           <row>
+<<<<<<< HEAD
 			<label>{{getDurationString(Video/duration)}}</label>
 			<label>{{SETTING(subtitlerenderer)}}</label>
             <label>{{VAL(Video/Role[3]/tag)}}</label>
