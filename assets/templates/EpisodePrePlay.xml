@@ -4,18 +4,17 @@
     <script src="{{URL(:/js/selectAudioAndSubs.js)}}" />
     <script src="{{URL(:/js/settings.js)}}" />
   </head>
-  {{VAR(seasonThumb:thumb)}}
 
  <body>
     <itemDetailWithImageHeader id="com.apple.trailer" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}&amp;PlexConnect=EpisodePrePlay')">
       <styles>
-          <color name="titleColor">#ff0000</color>
-          <color name="metadataColor">#0099ff</color>
-        </styles>
+  <color name="titleColor">#ce7f1a</color>
+  <color name="metadataColor">#ffffff</color>
+</styles>
  
        <header>
          <imageHeader>
-           <image insets="{{VAL(^aTVScreenResolution:1:720=1039|1080=1019)}}, 0, 0, 0" required="true">http://192.168.1.3:5050/Gradient/gradient.php?image={{IMAGEURL(Video/art:::)}}&amp;gradient=tv&amp;hd={{VAL(^aTVScreenResolution)}}&amp;title={{VAL(Video/index)}}.+{{EVAL("{{VAL(Video/title)}}".replace(" ","+"))}}</image>
+	       <image insets="{{VAL(^aTVScreenResolution:1:720=820|1080=690)}}, 0, 0, 0" required="true">http://192.168.1.3:5050/Gradient/gradient.php?image={{IMAGEURL(Video/art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}&amp;title={{EVAL("{{VAL(Video/title)}}".replace(" ","+"))}}</image>
          </imageHeader>
        </header>
       
@@ -28,7 +27,7 @@
       <summary>{{VAL(Video/summary)}}</summary>{{CUT($showsynopsis::Hide=CUT|Show=)}}
       <summary>{{VAL(Video/summary)}}</summary>{{CUT(Video/viewCount:CUT:=)}}{{CUT($showsynopsis::Show=CUT|Hide=)}}
       <summary>{{TEXT(Synopsis hidden.)}}</summary>{{CUT(Video/viewCount)}}{{CUT($showsynopsis::Show=CUT|Hide=)}}
-      <image style="sixteenByNinePoster">{{IMAGEURL(#seasonThumb::)}}</image>
+      <image style="sixteenByNinePoster">{{IMAGEURL(Video/thumb::)}}</image>
       <defaultImage>resource://16x9.png</defaultImage>
  
 
@@ -56,13 +55,17 @@
             <label>{{VAL(Video/Writer[2]/tag)}}</label>
           </row>
           <row>
+			<label>{{EVAL("{{VAL(Video/Media/container)}} / {{VAL(Video/Media/videoCodec)}}".upper())}}</label>
+			<label>{{SETTING(subtitlerenderer)}}</label>
+            <label>{{VAL(Video/Writer[3]/tag)}}</label>
+          </row>
+        <row>
             <mediaBadges>
             <videoFormat>{{VAL(Video/Media/videoResolution:widescreen:1080=SuperHD|720=HD|576=SD|480=SD|sd=SD)}}</videoFormat>
             <audioFormat>dolbyDigital</audioFormat>{{CUT(Video/Media/audioChannels:CUT:2=CUT|6=|8=)}}                   <closedCaption/>
             </mediaBadges>
-            <label>{{SETTING(subtitlerenderer)}}</label>
-            <label>{{VAL(Video/Writer[3]/tag)}}</label>
-          </row>
+            <label>{{SETTING(remotebitrate)}}</label>
+ 		</row>
           <row>
             <starRating hasUserSetRating="true">
             <percentage>{{EVAL({{VAL(Video/userRating:0)}} * 10)}}</percentage>
@@ -70,8 +73,8 @@
             <starRating>
             <percentage>{{EVAL({{VAL(Video/rating:0)}} * 10)}}</percentage>
             </starRating>{{CUT(Video/userRating::0=CUT)}}
+		  </row>
 
- </row>
         </rows>
       </table>
 
@@ -159,7 +162,6 @@
           </sections>
         </shelf>
       </bottomShelf>
-
-		</itemDetailWithImageHeader>
+	 </itemDetailWithImageHeader>
 	</body>
 </atv>
