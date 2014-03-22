@@ -59,8 +59,8 @@
           </row>
           <row>
             <label>{{EVAL("{{VAL(Video/Media/container)}} / {{VAL(Video/Media/videoCodec)}}".upper())}}</label>
+            <label>{{SETTING(remotebitrate)}}</label>
             <label>{{VAL(Video/Role[4]/tag)}}</label>
-            <label>{{VAL(Video/Director[4]/tag)}}</label>
             <label>{{VAL(Video/Producer[4]/tag)}}</label>
           </row>
           <row>
