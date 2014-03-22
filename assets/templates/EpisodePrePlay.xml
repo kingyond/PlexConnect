@@ -51,7 +51,6 @@
             <label>{{VAL(Video/Writer/tag)}}</label>
           </row>
           <row>
-<<<<<<< HEAD
             <label>{{VAL(Video/Media/videoResolution:Unknown:1080=1080p|720=720p|576=SD|480=SD|sd=SD)}}   {{VAL(Video/Media/audioCodec:Unknown:ac3=AC3|aac=AAC|mp3=MP3|dca=DTS|drms=DRMS)}} {{VAL(Video/Media/audioChannels:Unknown:2=Stereo|6=5.1|8=7.1)}} </label>
             <label>{{SETTING(transcodequality)}}</label>
             <label>{{VAL(Video/Writer[2]/tag)}}</label>
@@ -62,7 +61,6 @@
             <audioFormat>dolbyDigital</audioFormat>{{CUT(Video/Media/audioChannels:CUT:2=CUT|6=|8=)}}                   <closedCaption/>
             </mediaBadges>
             <label>{{SETTING(subtitlerenderer)}}</label>
-=======
             <label>{{VAL(Video/Media/videoResolution:Unknown:1080=1080p|720=720p|576=SD|480=SD|sd=SD)}} / {{VAL(Video/Media/audioCodec:Unknown:ac3=AC3|aac=AAC|mp3=MP3|dca=DTS|drms=DRMS)}} {{VAL(Video/Media/audioChannels:Unknown:2=Stereo|6=5.1|8=7.1)}} </label>
             <label>{{VAL(Video/Director[2]/tag)}}</label>
             <label>{{VAL(Video/Writer[2]/tag)}}</label>
@@ -70,7 +68,6 @@
           <row>
             <label>{{EVAL("{{VAL(Video/Media/container)}} / {{VAL(Video/Media/videoCodec)}}".upper())}}</label>
             <label>{{VAL(Video/Director[3]/tag)}}</label>
->>>>>>> upstream/master
             <label>{{VAL(Video/Writer[3]/tag)}}</label>
           </row>
           <row>
@@ -80,14 +77,11 @@
             <starRating>
             <percentage>{{EVAL({{VAL(Video/rating:0)}} * 10)}}</percentage>
             </starRating>{{CUT(Video/userRating::0=CUT)}}
-<<<<<<< HEAD
             <label>{{SETTING(remotebitrate)}}</label>
 		</row>
-=======
             <label>{{VAL(Video/Director[4]/tag)}}</label>
             <label>{{VAL(Video/Writer[4]/tag)}}</label>
           </row>
->>>>>>> upstream/master
         </rows>
       </table>
 
