@@ -7,7 +7,7 @@
 
   <body>
       {{ADDXML(OnDeck::/library/onDeck)}}      
-      {{ADDXML(RecentlyAdded::/library/recentlyAdded?stack=0)}}
+      {{ADDXML(RecentlyAdded::/library/recentlyAdded?stack=1)}}
       {{ADDXML(VideoChannels::/channels/all)}}
       {{VAR(items:NoKey:FALSE)}}
       {{VAR(sections:NoKey:FALSE)}}  <!--this sets the var to FALSE-->
