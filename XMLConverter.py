@@ -329,6 +329,10 @@ def XML_PMS2aTV(PMS_baseURL, path, options):
         XMLtemplate = 'Settings_Library.xml'
         path = ''  # clear path - we don't need PMS-XML
         
+    elif cmd=='SettingsFanart':
+        XMLtemplate = 'Settings_Fanart.xml'
+        path = ''  # clear path - we don't need PMS-XML
+        
     elif cmd=='SettingsMovies':
         XMLtemplate = 'Settings_Movies.xml'
         path = ''  # clear path - we don't need PMS-XML

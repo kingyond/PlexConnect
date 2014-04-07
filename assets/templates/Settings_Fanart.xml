@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atv>
+  <head>
+    <script src="{{URL(:/js/utils.js)}}" />
+    <script src="{{URL(:/js/settings.js)}}" />
+  </head>
+
+  <body>
+    <listWithPreview id="SettingsPage_Library">
+      <header>
+        <simpleHeader>
+          <title>{{TEXT(Fanart Settings)}}</title>
+        </simpleHeader>
+      </header>
+	<menu>
+        <sections>
+          <menuSection>
+            <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(Movies)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+                <oneLineMenuItem id="Movie_Preplay" onSelect="toggleSettings('Movie_Preplay', 'Settings_Fanart')">
+                <label>{{TEXT(Movie Fanart)}}</label>
+                <rightLabel>{{SETTING(movie_preplay)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/MoviePrePlay.png::768)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+                <oneLineMenuItem id="Movie_Preplay_Poster" onSelect="toggleSettings('Movie_Preplay_Poster', 'Settings_Fanart')">
+                <label>{{TEXT(Movie Poster)}}</label>
+                <rightLabel>{{SETTING(movie_preplay_poster)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/MoviePrePlay.png::768)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+                </items>
+          </menuSection>
+              
+          <menuSection>
+            <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(TV Shows)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+              <oneLineMenuItem id="Tvshow_List" onSelect="toggleSettings('Tvshow_List', 'Settings_Fanart')">
+                <label>{{TEXT(Season List)}}</label>
+                <rightLabel>{{SETTING(tvshow_list)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/FanartOn.png)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+              
+                <oneLineMenuItem id="Tvshow_Cover" onSelect="toggleSettings('Tvshow_Cover', 'Settings_Fanart')">
+                <label>{{TEXT(Season Coverflow)}}</label>
+                <rightLabel>{{SETTING(tvshow_cover)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/FanartOn.png)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+                            <oneLineMenuItem id="Tvshow_Grid" onSelect="toggleSettings('Tvshow_Grid', 'Settings_Fanart')">
+                <label>{{TEXT(Season Grid)}}</label>
+                <rightLabel>{{SETTING(tvshow_grid)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/FanartOn.png)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+              
+                <oneLineMenuItem id="Episode_List" onSelect="toggleSettings('Episode_List', 'Settings_Fanart')">
+                <label>{{TEXT(Episode List)}}</label>
+                <rightLabel>{{SETTING(episode_list)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/FanartOn.png)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+              
+                <oneLineMenuItem id="Episode_Preplay" onSelect="toggleSettings('Episode_Preplay', 'Settings_Fanart')">
+                <label>{{TEXT(Episode Fanart)}}</label>
+                <rightLabel>{{SETTING(episode_preplay)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/FanartOn.png)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+              
+                <oneLineMenuItem id="Episode_Preplay_Poster" onSelect="toggleSettings('Episode_Preplay_Poster', 'Settings_Fanart')">
+                <label>{{TEXT(Episode Poster)}}</label>
+                <rightLabel>{{SETTING(episode_preplay_poster)}}</rightLabel>
+                <preview>
+                  <crossFadePreview>
+                    <image>{{URL(:/thumbnails/MoviePrePlay.png::768)}}</image>
+                    </crossFadePreview>
+                </preview>
+              </oneLineMenuItem>
+            </items>
+          </menuSection>
+        </sections>
+      </menu>
+    </listWithPreview>
+  </body>
+</atv>

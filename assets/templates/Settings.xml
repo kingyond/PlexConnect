@@ -77,6 +77,12 @@
                   <arrow/>
                 </accessories>
               </oneLineMenuItem>
+              <oneLineMenuItem id="Fanart" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsFanart')">
+                <label>{{TEXT(Fanart Options)}}</label>
+                <accessories>
+                  <arrow/>
+                </accessories>
+              </oneLineMenuItem>{{CUT(^aTVFirmwareVersion:CUT:=CUT|6.0=)}}
                 <oneLineMenuItem id="MovieView" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsMovies')">
                 <label>{{TEXT(Movie Options)}}</label>
                 <accessories>

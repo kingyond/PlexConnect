@@ -4,6 +4,9 @@
   </head>
   
   <body>
+  
+  <!--Off-->
+  
     <scroller id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
       <header>
         <simpleHeader>
@@ -39,6 +42,124 @@
             <title></title>
         </collectionDivider>
       </items>
-    </scroller>
+    </scroller>{{CUT($tvshow_cover::Off=|Banner=CUT|Gradient=CUT|No Gradient=CUT)}}
+    
+    <!--Banner-->
+    
+        <scroller id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
+      <header>
+          <imageHeader>
+              <image insets="5, 0, 0, 0" required="true">{{IMAGEURL(banner)}}</image>
+          </imageHeader>
+      </header>
+      <items>
+      <collectionDivider alignment="left">
+            <title></title>
+        </collectionDivider>
+        <shelf id="coverflow" columnCount="{{EVAL(min({{VAL(size:0)}},5))}}">
+          <sections>
+            <shelfSection>
+              <items>
+                <goldenPoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_tvshows::Highlighted Only=false|Show All=true)}}"
+                              onPlay="atv.loadURL('{{URL(key)}}')"
+                              onSelect="atv.loadURL('{{URL(key)}}')"
+                              onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
+                  {{COPY(Directory)}}
+                  <title>{{VAL(title)}}</title>
+                  <image>{{IMAGEURL(thumb::384)}}</image>
+                  <defaultImage>resource://Poster.png</defaultImage>
+                </goldenPoster>{{CUT(Directory/title:CUT:=)}}
+            
+            <!--    <oneLineMenuItem id="none">
+                  <label>No Seasons</label>
+                </oneLineMenuItem>{{CUT(Directory/title::=CUT)}}-->
+              </items>
+            </shelfSection>
+          </sections>
+        </shelf>
+        <collectionDivider alignment="left">
+            <title></title>
+        </collectionDivider>
+      </items>
+    </scroller>{{CUT($tvshow_cover::Banner=|Off=CUT|Gradient=CUT|No Gradient=CUT)}}
+    
+        <!--Gradient-->
+    
+        <scroller id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
+      <header>
+          <imageHeader>
+               <image insets="850, 0, 0, 0" required="true">http://192.168.1.3:5050/Gradient/gradient.php?image={{IMAGEURL(art:::)}}&amp;gradient=tvseason&amp;hd=1080</image>
+          </imageHeader>
+      </header>
+      <items>
+      <collectionDivider alignment="left">
+            <title></title>
+        </collectionDivider>
+        <shelf id="coverflow" columnCount="{{EVAL(min({{VAL(size:0)}},5))}}">
+          <sections>
+            <shelfSection>
+              <items>
+                <goldenPoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_tvshows::Highlighted Only=false|Show All=true)}}"
+                              onPlay="atv.loadURL('{{URL(key)}}')"
+                              onSelect="atv.loadURL('{{URL(key)}}')"
+                              onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
+                  {{COPY(Directory)}}
+                  <title>{{VAL(title)}}</title>
+                  <image>{{IMAGEURL(thumb::384)}}</image>
+                  <defaultImage>resource://Poster.png</defaultImage>
+                </goldenPoster>{{CUT(Directory/title:CUT:=)}}
+            
+            <!--    <oneLineMenuItem id="none">
+                  <label>No Seasons</label>
+                </oneLineMenuItem>{{CUT(Directory/title::=CUT)}}-->
+              </items>
+            </shelfSection>
+          </sections>
+        </shelf>
+        <collectionDivider alignment="left">
+            <title></title>
+        </collectionDivider>
+      </items>
+    </scroller>{{CUT($tvshow_cover::Gradient=|Banner=CUT|Off=CUT|No Gradient=CUT)}}
+    
+        <!--No Gradient-->
+    
+        <scroller id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
+      <header>
+        <imageHeader>
+          <image insets="720, 0, 0, 0" required="true">{{IMAGEURL(art::)}}</image>
+        </imageHeader>
+      </header>
+      <items>
+      <collectionDivider alignment="left">
+            <title></title>
+        </collectionDivider>
+        <shelf id="coverflow" columnCount="{{EVAL(min({{VAL(size:0)}},5))}}">
+          <sections>
+            <shelfSection>
+              <items>
+                <goldenPoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_tvshows::Highlighted Only=false|Show All=true)}}"
+                              onPlay="atv.loadURL('{{URL(key)}}')"
+                              onSelect="atv.loadURL('{{URL(key)}}')"
+                              onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
+                  {{COPY(Directory)}}
+                  <title>{{VAL(title)}}</title>
+                  <image>{{IMAGEURL(thumb::384)}}</image>
+                  <defaultImage>resource://Poster.png</defaultImage>
+                </goldenPoster>{{CUT(Directory/title:CUT:=)}}
+            
+            <!--    <oneLineMenuItem id="none">
+                  <label>No Seasons</label>
+                </oneLineMenuItem>{{CUT(Directory/title::=CUT)}}-->
+              </items>
+            </shelfSection>
+          </sections>
+        </shelf>
+        <collectionDivider alignment="left">
+            <title></title>
+        </collectionDivider>
+      </items>
+    </scroller>{{CUT($tvshow_cover::No Gradient=|Banner=CUT|Gradient=CUT|Off=CUT)}}
+    
   </body>
 </atv>

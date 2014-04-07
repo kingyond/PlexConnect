@@ -13,16 +13,16 @@ options = { \
     'movieview'         :('Grid', 'List', 'Detailed List'), \
     'homevideoview'     :('Grid', 'List', 'Detailed List'), \
     'actorview'         :('Movies', 'Portrait'), \
-    'showview'          :('List', 'Grid', 'Bookcase'), \
+    'showview'          :('Grid', 'List', 'Bookcase'), \
     'flattenseason'     :('False', 'True'), \
-    'seasonview'        :('List', 'Coverflow'), \
+    'seasonview'        :('Grid', 'Coverflow', 'List'), \
     'channelview'       :('List', 'Grid', 'Bookcase'), \
     'durationformat'    :('Hours/Minutes', 'Minutes'), \
-    'showtitles_library'         :('Highlighted Only', 'Show All'), \
-    'showtitles_movies'         :('Highlighted Only', 'Show All'), \
-    'showtitles_tvshows'        :('Highlighted Only', 'Show All'), \
-    'showtitles_homevideos'     :('Highlighted Only', 'Show All'), \
-    'showtitles_channels'       :('Highlighted Only', 'Show All'), \
+    'showtitles_library'        :('Show All', 'Highlighted Only'), \
+    'showtitles_movies'         :('Show All', 'Highlighted Only'), \
+    'showtitles_tvshows'        :('Show All', 'Highlighted Only'), \
+    'showtitles_homevideos'     :('Show All', 'Highlighted Only'), \
+    'showtitles_channels'       :('Show All', 'Highlighted Only'), \
     'movies_navbar_unwatched'   :('checked', 'unchecked'), \
     'movies_navbar_byfolder'    :('checked', 'unchecked'), \
     'movies_navbar_collections' :('checked', 'unchecked'), \
@@ -38,14 +38,22 @@ options = { \
     'tv_navbar_unwatched'       :('checked', 'unchecked'), \
     'tv_navbar_genres'          :('checked', 'unchecked'), \
     'tv_navbar_more'            :('checked', 'unchecked'), \
-    'libraryview'            :('Grid', 'List'), \
-    'imageheader'            :('Show', 'Hide'), \
-    'sectionicons'            :('Apple', 'Plex', 'Fanart', 'Custom'), \
-    'sectionsposition'            :('Top', 'Bottom', 'Flow', 'Middle'), \
-    'library_search'            :('Show', 'Hide'), \
+    'libraryview'               :('Grid', 'List'), \
+    'imageheader'               :('Hide', 'Show'), \
+    'sectionicons'              :('Apple', 'Plex', 'Fanart', 'Custom'), \
+    'sectionsposition'          :('Flow', 'Top', 'Middle', 'Bottom'), \
+    'library_search'            :('Hide', 'Show'), \
     'library_ondeck'            :('checked', 'unchecked'), \
-    'library_recentlyadded'            :('checked', 'unchecked'), \
-    'library_channels'            :('unchecked', 'checked'), \
+    'library_recentlyadded'     :('checked', 'unchecked'), \
+    'library_channels'          :('unchecked', 'checked'), \
+    'movie_preplay'           :('Off', 'No Gradient', 'Gradient'), \
+    'movie_preplay_poster'    :('On', 'Off'), \
+    'tvshow_list'             :('Off', 'Banner', 'No Gradient', 'Gradient'), \
+    'tvshow_cover'            :('Off', 'Banner', 'No Gradient', 'Gradient'), \
+	'tvshow_grid'             :('Off', 'Banner', 'No Gradient', 'Gradient'), \
+    'episode_list'            :('Off', 'Banner', 'No Gradient', 'Gradient'), \
+    'episode_preplay'         :('Off', 'No Gradient', 'Gradient'), \
+    'episode_preplay_poster'  :('On', 'Off'), \
     'transcodequality'  :('1080p 40.0Mbps', \
                           '480p 2.0Mbps', \
                           '720p 3.0Mbps', '720p 4.0Mbps', \
@@ -58,7 +66,7 @@ options = { \
     'subtitlesize'      :('100', '125', '150', '50', '75'), \
     'audioboost'        :('100', '175', '225', '300'), \
     'showunwatched'     :('True', 'False'), \
-    'showsynopsis'      :('Hide', 'Show'), \
+    'showsynopsis'      :('Show', 'Hide'), \
     'showplayerclock'   :('True', 'False'), \
     'overscanadjust'    :('0', '1', '2', '3', '-3', '-2', '-1'), \
     'clockposition'     :('Center', 'Right', 'Left'), \
