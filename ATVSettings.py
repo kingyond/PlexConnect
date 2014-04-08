@@ -10,7 +10,7 @@ from Debug import *  # dprint()
 
 
 options = { \
-    'libraryview'       :('List', 'Grid', 'Bookcase'), \
+    'libraryview'       :('List'), \
     'movieview'         :('Grid', 'List', 'Detailed List'), \
     'homevideoview'     :('Grid', 'List', 'Detailed List'), \
     'actorview'         :('Movies', 'Portrait'), \
@@ -39,7 +39,7 @@ options = { \
     'tv_navbar_unwatched'       :('checked', 'unchecked'), \
     'tv_navbar_genres'          :('checked', 'unchecked'), \
     'tv_navbar_more'            :('checked', 'unchecked'), \
-    'libraryview'               :('Grid', 'List'), \
+    'libraryview'               :('Grid', 'List', 'Bookcase'), \
     'imageheader'               :('Hide', 'Show'), \
     'sectionicons'              :('Apple', 'Plex', 'Fanart', 'Custom'), \
     'sectionsposition'          :('Flow', 'Top', 'Middle', 'Bottom'), \

@@ -980,13 +980,9 @@ class CCommandCollection(CCommandHelper):
         height, leftover = self.getParam(src, leftover)
         if height=='':
             height = width
-<<<<<<< HEAD
-            
-        PMS_uuid = self.PMS_uuid 
-=======
+
         
         PMS_uuid = self.PMS_uuid
->>>>>>> upstream/master
         PMS_baseURL = self.PMS_baseURL
         cmd_start = key.find('PMS(')
         cmd_end = key.find(')', cmd_start)
