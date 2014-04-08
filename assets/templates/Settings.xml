@@ -82,7 +82,7 @@
                 <accessories>
                   <arrow/>
                 </accessories>
-              </oneLineMenuItem>
+              </oneLineMenuItem>{{CUT(^aTVFirmwareVersion:CUT:=CUT|9.0=)}}
               <oneLineMenuItem id="Fanart" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsFanart')">
                 <label>{{TEXT(Fanart Options)}}</label>
                 <accessories>

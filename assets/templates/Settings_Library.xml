@@ -61,7 +61,11 @@
               <oneLineMenuItem id="ShowTitles_Library" onSelect="toggleSettings('ShowTitles_Library', 'Settings_Library')">
                 <label>{{TEXT(Poster Titles)}}</label>
                 <rightLabel>{{SETTING(showtitles_library)}}</rightLabel>
-              </oneLineMenuItem>              
+              </oneLineMenuItem> 
+              <oneLineMenuItem id="ChannelView" onSelect="toggleSettings('ChannelView', 'Settings_TopLevel')">
+                <label>{{TEXT(Channel View)}}</label>
+                <rightLabel>{{SETTING(channelview)}}</rightLabel>
+              </oneLineMenuItem>            
             </items>
           </menuSection>
 
