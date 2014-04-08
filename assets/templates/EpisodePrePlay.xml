@@ -18,7 +18,7 @@
  
        <header>
          <imageHeader>
-	       <image insets="{{VAL(^aTVScreenResolution:1:720=820|1080=690)}}, 0, 0, 0" required="true">http://192.168.1.3:5050/Gradient/gradient.php?image={{IMAGEURL(Video/art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}&amp;title={{EVAL("{{VAL(Video/title)}}".replace(" ","+"))}}</image>
+	       <image insets="{{VAL(^aTVScreenResolution:1:720=820|1080=690)}}, 0, 0, 0" required="true">http://__LOCALIP__:5050/Gradient/gradient.php?image={{IMAGEURL(Video/art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}&amp;title={{EVAL("{{VAL(Video/title)}}".replace(" ","+"))}}</image>
          </imageHeader>
        </header>
       
@@ -339,10 +339,8 @@
       <summary>{{VAL(Video/summary)}}</summary>{{CUT($showsynopsis::Hide=CUT|Show=)}}
       <summary>{{VAL(Video/summary)}}</summary>{{CUT(Video/viewCount:CUT:=)}}{{CUT($showsynopsis::Show=CUT|Hide=)}}
       <summary>{{TEXT(Synopsis hidden.)}}</summary>{{CUT(Video/viewCount)}}{{CUT($showsynopsis::Show=CUT|Hide=)}}
-      <image style="moviePoster">{{IMAGEURL(Video/thumb::768)}}</image>{{CUT($episode_preplay_poster::On=|Off=CUT)}}
-      <image style="moviePoster">{{IMAGEURL(#parentThumb::768)}}</image>{{CUT($episode_preplay_poster::Off=|On=CUT)}}
-
-      <defaultImage>resource://16x9.png</defaultImage>
+      <image style="sixteenByNinePoster">{{IMAGEURL(Video/thumb::768)}}</image>
+	  <defaultImage>resource://16x9.png</defaultImage>
  
 
       <table>

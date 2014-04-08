@@ -980,7 +980,8 @@ class CCommandCollection(CCommandHelper):
         height, leftover = self.getParam(src, leftover)
         if height=='':
             height = width
-        
+            
+        PMS_uuid = self.PMS_uuid 
         PMS_baseURL = self.PMS_baseURL
         cmd_start = key.find('PMS(')
         cmd_end = key.find(')', cmd_start)
@@ -990,7 +991,7 @@ class CCommandCollection(CCommandHelper):
             PMS_baseURL = PlexAPI.getPMSProperty(self.ATV_udid, PMS_uuid, 'baseURL')
             key = key[cmd_end+1:]
         
-        AuthToken = PlexAPI.getPMSProperty(self.ATV_udid, self.PMS_uuid, 'accesstoken')
+        AuthToken = PlexAPI.getPMSProperty(self.ATV_udid, PMS_uuid, 'accesstoken')
         
         if width=='':
             # direct play
