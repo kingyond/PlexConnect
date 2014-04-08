@@ -71,12 +71,18 @@
               </horizontalDivider>
             </header>
             <items>
+<<<<<<< HEAD
               <oneLineMenuItem id="LibraryView" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsLibrary')">
                 <label>{{TEXT(Library Options)}}</label>
+=======
+              <oneLineMenuItem id="Top Level" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsTopLevel')">
+                <label>{{TEXT(Top Level Options)}}</label>
+>>>>>>> upstream/master
                 <accessories>
                   <arrow/>
                 </accessories>
               </oneLineMenuItem>
+<<<<<<< HEAD
               <oneLineMenuItem id="Fanart" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsFanart')">
                 <label>{{TEXT(Fanart Options)}}</label>
                 <accessories>
@@ -84,6 +90,9 @@
                 </accessories>
               </oneLineMenuItem>{{CUT(^aTVFirmwareVersion:CUT:=CUT|6.0=)}}
                 <oneLineMenuItem id="MovieView" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsMovies')">
+=======
+              <oneLineMenuItem id="MovieView" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsMovies')">
+>>>>>>> upstream/master
                 <label>{{TEXT(Movie Options)}}</label>
                 <accessories>
                   <arrow/>
@@ -97,12 +106,6 @@
               </oneLineMenuItem>
               <oneLineMenuItem id="HomevideoView" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsHomeVideos')">
                 <label>{{TEXT(Home Video Options)}}</label>
-                <accessories>
-                  <arrow/>
-                </accessories>
-              </oneLineMenuItem>
-              <oneLineMenuItem id="Channels" onSelect="atv.loadURL('{{URL(:/)}}&amp;PlexConnect=SettingsChannels')">
-                <label>{{TEXT(Channel Options)}}</label>
                 <accessories>
                   <arrow/>
                 </accessories>

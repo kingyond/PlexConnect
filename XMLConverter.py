@@ -352,8 +352,8 @@ def XML_PMS2aTV(PMS_address, path, options):
         XMLtemplate = 'Settings_HomeVideos.xml'
         path = ''  # clear path - we don't need PMS-XML
 
-    elif cmd=='SettingsChannels':
-        XMLtemplate = 'Settings_Channels.xml'
+    elif cmd=='SettingsTopLevel':
+        XMLtemplate = 'Settings_TopLevel.xml'
         path = ''  # clear path - we don't need PMS-XML
         
     elif cmd.startswith('SettingsToggle:'):
@@ -980,8 +980,13 @@ class CCommandCollection(CCommandHelper):
         height, leftover = self.getParam(src, leftover)
         if height=='':
             height = width
+<<<<<<< HEAD
             
         PMS_uuid = self.PMS_uuid 
+=======
+        
+        PMS_uuid = self.PMS_uuid
+>>>>>>> upstream/master
         PMS_baseURL = self.PMS_baseURL
         cmd_start = key.find('PMS(')
         cmd_end = key.find(')', cmd_start)
