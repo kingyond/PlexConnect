@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /Users/Admin/Desktop/PlexConnect/update/osx
+cd ~/Desktop/plexconnect/update/osx
 
 ## Generate xml.bash based on OSX IP Address for all .xml files
 ifconfig en0|grep 'inet '|cut -d ' ' -f 2 > xml.bash
@@ -30,5 +30,5 @@ cp xml.bash /usr/bin
 
 chmod +x /usr/bin/xml.bash
 
-cd /Users/Admin/Desktop/PlexConnect/assets/templates
+cd ~/Desktop/plexconnect/assets/templates
 xml.bash

@@ -49,7 +49,7 @@
      <itemCollectionWithImageHeader id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
   	<header>
         <imageHeader>
-          <image insets="850, 0, 0, 0" required="true">http://192.168.1.3:5050/Gradient/gradient.php?image={{IMAGEURL(art:::)}}&amp;gradient=tvseason&amp;hd=1080</image>
+          <image insets="850, 0, 0, 0" required="true">http://__LOCALIP__:5050/Gradient/gradient.php?image={{IMAGEURL(art:::)}}&amp;gradient=tvseason&amp;hd=1080</image>
         </imageHeader>
       </header>
       <menu>
