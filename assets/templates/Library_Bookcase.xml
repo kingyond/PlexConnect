@@ -22,39 +22,37 @@
             <title>{{VAL(name)}}{{VAL(local::0= &lt;{{TEXT(remote)}}&gt;|0 =)}}</title>
           </collectionDivider>{{CUT(@main/size:CUT:0=CUT|1=CUT|2=)}}
           
-          <shelf id="Library_Grid_{{VAL(name)}}" columnCount="6">
-            <sections>
-              <shelfSection>
-                <items>
-                  <!-- /library/sections -->
-                  <squarePoster id="{{VAL(key)}}" showOutline="false" alwaysShowTitles="true"
-                               onPlay="atv.loadURL('{{URL(key)}}')"
-                               onSelect="atv.loadURL('{{URL(key)}}')"
-                               onHoldSelect="refreshSection(...)">
-                  {{COPY(Directory)}}
-                  {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
-                    <title>{{VAL(title)}}</title>
-                    <image>{{IMAGEURL(thumb::384)}}</image>
-                    <defaultImage>resource://Square.png</defaultImage>
-                    <!--badgeCount></badgeCount-->
-                  </squarePoster>
-                  
-                  <!-- search -->
-                  <squarePoster id="{{VAL(searchKey)}}" showOutline="false" alwaysShowTitles="true"
-                               onPlay="atv.loadURL('{{URL(searchKey)}}')"
-                               onSelect="atv.loadURL('{{URL(searchKey)}}')">
-                    <title>{{TEXT(Search)}}</title>
-                    <image>{{IMAGEURL(searchThumb::384)}}</image>  <!--searchThumb not yet defined-->
-                    <defaultImage>resource://Square.png</defaultImage>
-                  </squarePoster>{{CUT($library_search::Show=|Hide=CUT)}}
-                  
-                </items>
-              </shelfSection>
-            </sections>
-          </shelf>
+          <grid id="Library_Grid_{{VAL(name)}}" columnCount="8">
+            <items>
+              <!-- /library/sections -->
+              <squarePoster id="{{VAL(key)}}" showOutline="false" alwaysShowTitles="true"
+                           onPlay="atv.loadURL('{{URL(key)}}')"
+                           onSelect="atv.loadURL('{{URL(key)}}')"
+                           onHoldSelect="refreshSection('{{VAL(key)}}', '{{URL(refreshKey)}}')">
+              {{COPY(Directory)}}
+              {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
+                <title>{{VAL(title)}}</title>
+                <subtitle>{{VAL(year:&#x00AD;)}}</subtitle><!--bugfix to prevent different poster sizes-->
+                <image>{{IMAGEURL(thumb::384)}}</image>
+                <defaultImage>resource://Square.png</defaultImage>
+                <!--badgeCount></badgeCount-->
+              </squarePoster>
+              
+              <!-- search -->
+              <squarePoster id="{{VAL(searchKey)}}" showOutline="false" alwaysShowTitles="true"
+                           onPlay="atv.loadURL('{{URL(searchKey)}}')"
+                           onSelect="atv.loadURL('{{URL(searchKey)}}')">
+                <title>{{TEXT(Search)}}</title>
+                <image>{{IMAGEURL(searchThumb::384)}}</image>  <!--searchThumb not yet defined-->
+                <defaultImage>resource://Square.png</defaultImage>
+              </squarePoster>{{CUT($library_search::Show=|Hide=CUT)}} 
+              
+            </items>
+          </grid>
         </__COPY__>
       </items>
     </scroller>
+
     
     <!--No Sections Available-->
     <dialog id="com.sample.error-dialog">
