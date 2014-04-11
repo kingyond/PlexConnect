@@ -405,9 +405,12 @@ def XML_PMS2aTV(PMS_address, path, options):
     
     elif path.find('SearchResults') != -1:
         XMLtemplate = 'ChannelsVideoSearchResults.xml'
+   
+    elif PMS_address=='owned' and path=='/library/sections':  # from PlexConnect.xml -> for //local, //myplex
+        XMLtemplate = 'Library_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'libraryview')+'.xml'
         
-    elif path=='/library/sections':  # from PlexConnect.xml -> for //local, //myplex
-        XMLtemplate = 'Library_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'libraryview')+'.xml'    
+    elif PMS_address=='shared' and path=='/library/sections':  # from PlexConnect.xml -> for //local, //myplex
+        XMLtemplate = 'Library_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'libraryview_remote')+'.xml'    
     
     elif path=='/channels/all':
         XMLtemplate = 'Channel_'+g_ATVSettings.getSetting(options['PlexConnectUDID'], 'channelview')+'.xml'

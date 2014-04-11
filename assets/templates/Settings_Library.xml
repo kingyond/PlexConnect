@@ -41,7 +41,11 @@
               <oneLineMenuItem id="LibraryView" onSelect="toggleSettings('LibraryView', 'Settings_Library')">
                 <label>{{TEXT(Library View)}}</label>
                 <rightLabel>{{SETTING(libraryview)}}</rightLabel>
-              </oneLineMenuItem>              
+              </oneLineMenuItem>
+              <oneLineMenuItem id="LibraryView_Remote" onSelect="toggleSettings('LibraryView_Remote', 'Settings_Library')">
+                <label>{{TEXT(Library View Shared)}}</label>
+                <rightLabel>{{SETTING(libraryview_remote)}}</rightLabel>
+              </oneLineMenuItem>               
                 <oneLineMenuItem id="ImageHeader" onSelect="toggleSettings('ImageHeader', 'Settings_Library')">
                 <label>{{TEXT(Header)}}</label>
                 <rightLabel>{{SETTING(imageheader)}}</rightLabel>
