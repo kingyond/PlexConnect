@@ -39,7 +39,7 @@ options = { \
     'tv_navbar_genres'          :('checked', 'unchecked'), \
     'tv_navbar_more'            :('checked', 'unchecked'), \
     'libraryview'               :('Grid', 'List', 'Bookcase'), \
-    'libraryview_remote'        :('List', 'Bookcase'), \
+    'libraryview_remote'        :('List', 'Bookcase', 'TopGrid'), \
     'imageheader'               :('Hide', 'Show'), \
     'sectionicons'              :('Apple', 'Plex', 'Fanart', 'Custom'), \
     'sectionsposition'          :('Flow', 'Top', 'Middle', 'Bottom'), \
