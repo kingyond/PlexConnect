@@ -43,9 +43,11 @@
                                                onHoldSelect="refreshSection('{{VAL(key)}}', '{{URL(refreshKey)}}')">
                             {{COPY(Directory)}}
                             {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
-                            <title>{{VAL(title)}}</title>
-                            <image>{{URL(:/thumbnails/{{VAL(type)}}.png)}}</image>
-                            <defaultImage>resource://16X9.png</defaultImage>
+                    <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/{{VAL(type)}}-flow-plex.png)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/{{VAL(type)}}-flow.png)}}</image>{{CUT($sectionicons_shared::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}-flow.png)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=CUT|Fanart=CUT|Custom=)}}
+                    <defaultImage>resource://16X9.png</defaultImage>
                         </moviePoster>
                         
                         <!-- search -->

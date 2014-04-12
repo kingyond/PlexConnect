@@ -42,6 +42,7 @@ options = { \
     'libraryview_remote'        :('List', 'Bookcase', 'TopGrid'), \
     'imageheader'               :('Hide', 'Show'), \
     'sectionicons'              :('Apple', 'Plex', 'Fanart', 'Custom'), \
+    'sectionicons_shared'       :('Apple', 'Plex', 'Fanart', 'Custom'), \
     'sectionsposition'          :('Flow', 'Top', 'Middle', 'Bottom'), \
     'library_search'            :('Hide', 'Show'), \
     'library_ondeck'            :('checked', 'unchecked'), \
