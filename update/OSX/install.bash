@@ -39,8 +39,8 @@ cd update/osx
 chmod +x /applications/plexconnect/update/osx/plexconnect.bash
 chmod +x /usr/bin/createcert.bash
 chmod +x /usr/bin/websharing.bash
-chmod -R 0777 /library/webserver/documents/gradienttv/ *.*
-chmod -R 0777 /library/webserver/documents/gradientmovies/ *.*
+chmod -R 0777 /library/webserver/documents/gradienttv/*.*
+chmod -R 0777 /library/webserver/documents/gradientmovies/*.*
 
 
 
