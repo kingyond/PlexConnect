@@ -28,7 +28,32 @@
           </items>
         </grid>
       </items>
-    </scroller>
+    </scroller>{{CUT($section_grid::Off=|Gradient=CUT)}}
+    
+        <scroller id="com.sample.movie-grid">
+    {{CUT(size:CUT:0=CUT|1=)}}
+  	<header>
+        <imageHeader>
+          <image insets="850, 0, 0, 0" required="true">http://192.168.1.12:5151/GradientTV/gradient.php?image={{IMAGEURL(art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}</image>        
+          </imageHeader>
+      </header>
+        <items>
+        <grid columnCount="7" id="grid_0">
+          <items>
+            <moviePoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_movies::Highlighted Only=false|Show All=true)}}"
+                             onPlay="atv.loadURL('{{URL(key)}}&amp;PlexConnect=Play')"
+                             onSelect="atv.loadURL('{{URL(key)}}&amp;PlexConnect=MoviePrePlay')"
+                             onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenuVideo')">
+              {{COPY(Video)}}
+              <title>{{VAL(title)}}</title>
+              <subtitle>{{VAL(year:&#x00AD;)}}</subtitle>
+              <image>{{IMAGEURL(thumb::384)}}</image>
+              <defaultImage>resource://Poster.png</defaultImage>
+            </moviePoster>
+          </items>
+        </grid>
+      </items>
+    </scroller>{{CUT($section_grid::Gradient=|Off=CUT)}}
     
     <!--No Items Available-->
     <dialog id="com.sample.error-dialog">
