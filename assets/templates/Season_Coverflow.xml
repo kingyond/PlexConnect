@@ -88,7 +88,7 @@
         <scroller id="com.sample.menu-items-with-sections" volatile="true" onVolatileReload="atv.loadAndSwapURL('{{URL()}}')">
       <header>
           <imageHeader>
-               <image insets="850, 0, 0, 0" required="true">http://__LOCALIP__:5050/Gradient/gradient.php?image={{IMAGEURL(art:::)}}&amp;gradient=tvseason&amp;hd=1080</image>
+               <image insets="850, 0, 0, 0" required="true">http://__LOCALIP__:5050/GradientTV/gradient.php?image={{IMAGEURL(art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}</image>
           </imageHeader>
       </header>
       <items>

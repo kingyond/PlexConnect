@@ -23,7 +23,10 @@ cp websharing.bash /usr/bin
 cp httpd.conf /etc/apache2
 
 ## copy gradient files
-cp -R Gradient /library/webserver/documents
+cp -R Gradientv /library/webserver/documents
+cp -R Gradientmovies /library/webserver/documents
+
+
 
 ## replace __INSTALLERPATH__ in default createcert.bash
 ## save directly to the /usr/bin folder
@@ -36,7 +39,8 @@ cd update/osx
 chmod +x /applications/plexconnect/update/osx/plexconnect.bash
 chmod +x /usr/bin/createcert.bash
 chmod +x /usr/bin/websharing.bash
-chmod 777 /library/webserver/documents/gradient/ *.*
+chmod -R 0777 /library/webserver/documents/gradienttv/ *.*
+chmod -R 0777 /library/webserver/documents/gradientmovies/ *.*
 
 
 

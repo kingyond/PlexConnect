@@ -32,6 +32,36 @@
           </items>
         </grid>
       </items>
-    </scroller>
+    </scroller>{{CUT($section_grid::Off=|Gradient=CUT)}}
+    
+        <scroller id="Show_Grid">
+ 	<header>
+        <imageHeader>
+          <image insets="850, 0, 0, 0" required="true">http://__LOCALIP__:5050/GradientTV/gradient.php?image={{IMAGEURL(art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}</image>        
+          </imageHeader>
+      </header>
+       <items>
+        <grid columnCount="7" id="grid_0">
+          <items>
+            <moviePoster id="{{VAL(key)}}" alwaysShowTitles="{{VAL($showtitles_tvshows::Highlighted Only=false|Show All=true)}}"
+                         onPlay="flattenSeason('{{URL(key)}}', '{{SETTING(flattenseason)}}', 'False')"
+                         onSelect="flattenSeason('{{URL(key)}}', '{{SETTING(flattenseason)}}', 'False')"
+                         onHoldSelect="scrobbleMenu('{{URL(key)}}&amp;PlexConnect=ScrobbleMenu')">
+              {{COPY(Directory)}}
+              <title>{{VAL(title)}}</title>
+              <image>{{IMAGEURL(thumb::384)}}</image>
+              <defaultImage>resource://Poster.png</defaultImage>
+							<badgeCount>{{unwatchedCountGrid(leafCount:0:viewedLeafCount:0)}}</badgeCount>{{CUT($showunwatched::False=CUT|True=)}}
+            </moviePoster>{{CUT(Directory/title:CUT:=)}}
+
+            <moviePoster id="none">
+              <title>{{TEXT(No Unwatched Shows)}}</title>
+              <defaultImage>resource://Poster.png</defaultImage>
+            </moviePoster>{{CUT(Directory/title::=CUT)}}
+          </items>
+        </grid>
+      </items>
+    </scroller>{{CUT($section_grid::Gradient=|Off=CUT)}}
+    
   </body>
 </atv>

@@ -37,6 +37,19 @@
 	
 	<menu>
         <sections>
+         <menuSection>
+            <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(General)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+                <oneLineMenuItem id="Section_Grid" onSelect="toggleSettings('Section_Grid', 'Settings_Fanart')">
+                <label>{{TEXT(Section Grid Gradient)}}</label>
+                <rightLabel>{{SETTING(section_grid)}}</rightLabel>
+              </oneLineMenuItem>
+                </items>
+          </menuSection>
           <menuSection>
             <header>
               <horizontalDivider alignment="left">

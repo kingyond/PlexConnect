@@ -50,6 +50,7 @@ options = { \
     'library_channels'          :('unchecked', 'checked'), \
     'movie_preplay'           :('Off', 'No Gradient', 'Gradient'), \
     'movie_preplay_poster'    :('On', 'Off'), \
+    'section_grid'    		  :('Off', 'Gradient'), \
     'tvshow_list'             :('Off', 'Banner', 'No Gradient', 'Gradient'), \
     'tvshow_cover'            :('Off', 'Banner', 'No Gradient', 'Gradient'), \
 	'tvshow_grid'             :('Off', 'Banner', 'No Gradient', 'Gradient'), \

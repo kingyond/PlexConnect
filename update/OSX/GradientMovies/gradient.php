@@ -42,10 +42,10 @@ if (isset($image) ) {
     
     //Blur effect for TV Shows
     if ($gradient == 'tv') {
-        imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($sized_image, IMG_FILTER_SMOOTH, -4);
-        imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
-        imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
+        //imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
+        //imagefilter($sized_image, IMG_FILTER_SMOOTH, -4);
+        //imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
+        //imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
         
        	imagecopy($sized_image, $line_image, 0, 0, 0, 0, $destWidth, $destHeight);
         $white = imagecolorallocate($sized_image, 255, 255, 255);
@@ -54,14 +54,20 @@ if (isset($image) ) {
         $w = $destWidth / 3.66;
         $fs = $destHeight / 36;
         imagettftext($sized_image, $fs, 0, $w, $h, $white, $font, $text);
-    } else if ($gradient == 'tvseason') {
- 
     } else if ($gradient == 'seasons') {
-        for ($i = 0; $i < 5; $i++) {
-            imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
-            imagefilter($sized_image, IMG_FILTER_SMOOTH, -4);
-            imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
-        }
+        //imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
+        //imagefilter($sized_image, IMG_FILTER_SMOOTH, -4);
+        //imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
+        //imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
+        /*$white = imagecolorallocate($sized_image, 255, 255, 255);
+        $font = 'HelveticaBold.ttf';
+        $h = $destHeight / 7.2;
+        $fs = $destHeight / 28;
+        
+        $fontSize = imageloadfont($font);
+        $xsize = imagefontwidth($fs) * imagefontwidth($fontSize) * strlen($text);
+        $w = ($destWidth - $xsize) / 2;
+        imagettftext($sized_image, $fs, 0, $w, $h, $white, $font, $text);*/
     } else {
         imagecopy($sized_image, $line_image, 0, 0, 0, 0, $destWidth, $destHeight);
         $white = imagecolorallocate($sized_image, 255, 255, 255);
@@ -69,7 +75,7 @@ if (isset($image) ) {
         $h = $destHeight / 2.25;
         $w = $destWidth / 3.66;
         $fs = $destHeight / 36;
-        imagettftext($sized_image, $fs, 0, $w, $h, $white, $font, $text);
+        imagettftext($sized_image, 12, 0, 30, 20, $white, $font, $text);
     }
 
     header("Content-type: image/png");
