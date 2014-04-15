@@ -39,7 +39,7 @@
 		<menuSection>
            <header>
               <horizontalDivider alignment="left">
-                <title>{{TEXT(Local Librarys)}}</title>
+                <title>{{TEXT(Library)}}</title>
               </horizontalDivider>
             </header>
             <items>
@@ -51,21 +51,25 @@
                 <label>{{TEXT(Library Icons)}}</label>
                 <rightLabel>{{SETTING(sectionicons)}}</rightLabel>
               </oneLineMenuItem>
+              <oneLineMenuItem id="SectionsPosition" onSelect="toggleSettings('SectionsPosition', 'Settings_Library')">
+                <label>{{TEXT(Library Sections)}}</label>
+                <rightLabel>{{SETTING(sectionsposition)}}</rightLabel>
+              </oneLineMenuItem>
               </items>
               </menuSection>
               <menuSection>
              <header>
               <horizontalDivider alignment="left">
-                <title>{{TEXT(Shared Librarys)}}</title>
+                <title>{{TEXT(Shared Library)}}</title>
               </horizontalDivider>
             </header>
             <items>
                 <oneLineMenuItem id="LibraryView_Remote" onSelect="toggleSettings('LibraryView_Remote', 'Settings_Library')">
-                <label>{{TEXT(Library View Shared)}}</label>
+                <label>{{TEXT(Library View)}}</label>
                 <rightLabel>{{SETTING(libraryview_remote)}}</rightLabel>
               </oneLineMenuItem>
               <oneLineMenuItem id="SectionIcons_Shared" onSelect="toggleSettings('SectionIcons_Shared', 'Settings_Library')">
-                <label>{{TEXT(Library Icons Shared)}}</label>
+                <label>{{TEXT(Library Icons)}}</label>
                 <rightLabel>{{SETTING(sectionicons_shared)}}</rightLabel>
               </oneLineMenuItem> 
                </items>
@@ -81,10 +85,6 @@
                 <label>{{TEXT(Header)}}</label>
                 <rightLabel>{{SETTING(imageheader)}}</rightLabel>
               </oneLineMenuItem>{{CUT(^aTVFirmwareVersion:CUT:=CUT|6.0=)}}
-			  <oneLineMenuItem id="SectionsPosition" onSelect="toggleSettings('SectionsPosition', 'Settings_Library')">
-                <label>{{TEXT(Sections Position)}}</label>
-                <rightLabel>{{SETTING(sectionsposition)}}</rightLabel>
-              </oneLineMenuItem>
               <oneLineMenuItem id="Library_Search" onSelect="toggleSettings('Library_Search', 'Settings_Library')">
                 <label>{{TEXT(Search Section)}}</label>
                 <rightLabel>{{SETTING(Library_search)}}</rightLabel>
