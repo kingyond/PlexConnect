@@ -75,7 +75,7 @@ if (isset($image) ) {
         $h = $destHeight / 2.25;
         $w = $destWidth / 3.66;
         $fs = $destHeight / 36;
-        imagettftext($sized_image, 12, 0, 30, 20, $white, $font, $text);
+        imagettftext($sized_image, $fs, 0, $w, $h, $white, $font, $text);
     }
 
     header("Content-type: image/png");

@@ -54,6 +54,8 @@ if (isset($image) ) {
         $w = $destWidth / 3.66;
         $fs = $destHeight / 36;
         imagettftext($sized_image, $fs, 0, $w, $h, $white, $font, $text);
+    
+    
     } else if ($gradient == 'seasons') {
         //imagefilter($sized_image, IMG_FILTER_GAUSSIAN_BLUR);
         //imagefilter($sized_image, IMG_FILTER_SMOOTH, -4);
@@ -75,7 +77,7 @@ if (isset($image) ) {
         $h = $destHeight / 2.25;
         $w = $destWidth / 3.66;
         $fs = $destHeight / 36;
-        imagettftext($sized_image, 12, 0, 30, 20, $white, $font, $text);
+        imagettftext($sized_image, $fs, 0, $w, $h, $white, $font, $text); 
     }
 
     header("Content-type: image/png");
