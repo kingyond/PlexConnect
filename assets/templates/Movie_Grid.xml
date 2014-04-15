@@ -34,7 +34,7 @@
     {{CUT(size:CUT:0=CUT|1=)}}
   	<header>
         <imageHeader>
-          <image insets="850, 0, 0, 0" required="true">http://__LOCALIP__:5151/GradientTV/gradient.php?image={{IMAGEURL(art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}</image>        
+          <image insets="850, 0, 0, 0" required="true">http://__LOCALIP__:5050/GradientTV/gradient.php?image={{IMAGEURL(art:::)}}&amp;hd={{VAL(^aTVScreenResolution)}}</image>        
           </imageHeader>
       </header>
         <items>
