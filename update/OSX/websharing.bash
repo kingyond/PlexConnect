@@ -1,3 +1,3 @@
 #!/bin/bash
 
-open ~/Desktop/PlexConnect/update/osx/Web\ Sharing.prefPane
+open /Applications/PlexConnect/update/osx/Web\ Sharing.prefPane
